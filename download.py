@@ -20,25 +20,25 @@ target_dir = sys.argv[1]
 
 conf = {'lantern': {'name': '蓝灯Lantern for Mac',
                     'url': 'https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer-beta.dmg',
-                    'path': target_dir + '/Mac/lantern-installer-beta.dmg'},
+                    'path': os.path.join(target_dir, 'Mac/lantern-installer-beta.dmg')},
         'psiphon': {'name': '赛风Psiphon for Win',
                     'url': 'https://psiphon.ca/psiphon3.exe',
-                    'path': target_dir + '/Win/psiphon3.exe'},
+                    'path': os.path.join(target_dir, 'Win/psiphon3.exe')},
         'psiphon_android': {'name': '赛风Psiphon for Android',
                             'url': 'https://psiphon.ca/PsiphonAndroid.apk',
-                            'path': target_dir + '/Android/PsiphonAndroid.apk'},
+                            'path': os.path.join(target_dir, 'Android/PsiphonAndroid.apk')},
         'wujie': {'name': '无界 for Win',
                   'url': 'https://s3.amazonaws.com/xiazai/u.zip',
-                  'path': target_dir + '/Win/无界.zip'},
+                  'path': os.path.join(target_dir, 'Win/无界.zip')},
         'wujie_android': {'name': '无界安卓版',
                           'url': 'https://s3.amazonaws.com/wujie/um.apk',
-                          'path': target_dir + '/Android/无界安卓.apk'},
+                          'path': os.path.join(target_dir, 'Android/无界安卓.apk')},
         'resilio_mac': {'name': '同步工具Resilio Sync for Mac',
                         'url': 'https://download-cdn.resilio.com/stable/osx/Resilio-Sync.dmg',
-                        'path': target_dir + '/Resilio_Sync/[Mac]Resilio Sync.dmg'},
+                        'path': os.path.join(target_dir, 'Resilio_Sync/[Mac]Resilio Sync.dmg')},
         'resilio_win': {'name': '同步工具Resilio Sync for Win',
                         'url': 'https://download-cdn.resilio.com/stable/windows64/Resilio-Sync_x64.exe',
-                        'path': target_dir + '/Resilio_Sync/[Win64]Resilio Sync.exe'}
+                        'path': os.path.join(target_dir, 'Resilio_Sync/[Win64]Resilio Sync.exe')}
         }
 
 
