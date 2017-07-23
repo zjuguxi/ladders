@@ -12,7 +12,6 @@ import sys
 # os.system('export https_proxy=http://127.0.0.1:1087')
 # os.system('export http_proxy=http://127.0.0.1:1087')
 
-# target_dir = '/Users/apple/Desktop/FUCK_GFW/'
 proxies = {'http': 'http://127.0.0.1:1087',  # shadowsocks的http代理
            'https': 'http://127.0.0.1:1087'}
 
@@ -69,8 +68,8 @@ def download(path, r, name):
 
 
 # 处理并验证conf，并传入 download()
-def download_all(conf):
-    for file_tuple in conf.items():
+def download_all(conf_dict):
+    for file_tuple in conf_dict.items():
         file_dict = file_tuple[1]
 
         r = requests.get(file_dict['url'], stream=True, proxies=proxies)
