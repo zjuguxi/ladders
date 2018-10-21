@@ -15,7 +15,11 @@ import sys
 proxies = {'http': 'http://127.0.0.1:1087',  # shadowsocks的http代理
            'https': 'http://127.0.0.1:1087'}
 
-target_dir = '~/Desktop/' if sys.argv[1] is None
+if len(sys.argv) > 1:
+    target_dir = sys.argv[1]
+else:
+    target_dir = '/Users/apple/FuckGFW'
+
 
 conf = {'lantern': {'name': '蓝灯Lantern for Mac',
                     'url': 'https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer-beta.dmg',
